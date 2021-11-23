@@ -48,6 +48,18 @@ for (let i = 0; i < lists.length; i++) {
 // set the innerText of the li element to be the current tip
 // append the newly created element as a child of the ul
 
+///////////// TASK 5
+/*
+This does not need to be in a function. yet...
+
+Not all aspects of the page need to accessed with querySelector, some have shortcuts on the document object.
+
+👉 Change the title property of the document by assigning it a new value.
+*/
+
+let title = document.title;
+title = "Test";
+
 let extraTips = [
   "Keep your pennies is a glass jar",
   "Save money buy not eating!",
