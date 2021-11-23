@@ -26,20 +26,19 @@ let h1 = document.querySelector("h1");
 h1.style.textDecoration = "underline";
 
 //Task 4
-// let lists = document.querySelectorAll("#tips-list");
-// for (let i = 1; i < lists.length; i++) {
-//   const newLi = document.createElement("li");
 
-//   lists[i].innerText = handleClick();
-//   lists.appendChild(newLi);
-// }
-let ul = document.querySelector("#tips-list");
-let lists = document.querySelectorAll("#tips-list>li");
-for (let i = 0; i < lists.length; i++) {
-  let newLi = document.createElement("li");
-  newLi.innerText = handleClick();
-  ul.appendChild(newLi);
+let extraTips = [
+  "Keep your pennies is a glass jar",
+  "Save money buy not eating!",
+  "Don't let your partner know...",
+];
+let lists = document.querySelector("#tips-list");
+for (let i = 0; i < extraTips.length; i++) {
+  const newLi = document.createElement("li");
+  newLi.innerText = extraTips[i];
+  lists.appendChild(newLi);
 }
+
 // There is a list of extra tips to be added to the unordered list with the id of #tips-list
 // 👉 Select the tips list
 // 👉 Use a for loop to loop through the array of tips
