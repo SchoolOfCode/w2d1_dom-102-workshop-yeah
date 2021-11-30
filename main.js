@@ -56,11 +56,32 @@ Not all aspects of the page need to accessed with querySelector, some have short
 👉 Change the title property of the document by assigning it a new value.
 */
 
-let title = document.title;
-title = "Test";
+document.title = "Test";
 
-let extraTips = [
-  "Keep your pennies is a glass jar",
-  "Save money buy not eating!",
-  "Don't let your partner know...",
-];
+// Task 6
+// 👉 Put the code from Task 5 in a function.
+
+// 👉 Have that function called on the click of the button with id #click-me
+function clickButton() {
+  document.title = "You clicked";
+}
+let btnClick = document.querySelector("#click-me");
+btnClick.addEventListener("click", clickButton);
+
+// Task 7
+// 👉 Add an input field, and a new button to the html.
+
+// 👉 Write a function that sets the h1's innerText to be whatever is in the input field.
+let input = document.createElement("input");
+input.setAttribute("type", "text");
+document.body.appendChild(input);
+
+let inputBtn = document.createElement("button");
+let btnText = document.createTextNode("Submit");
+inputBtn.appendChild(btnText);
+document.body.appendChild(inputBtn);
+
+function inputFunction() {
+  h1.innerText = input.value;
+}
+inputBtn.addEventListener("click", inputFunction);
